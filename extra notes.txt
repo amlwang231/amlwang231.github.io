@@ -1,0 +1,4 @@
+command + / is shortcut for comment in vs code
+
+<br> for line break in text
+<span> <span/> for recolor, targeting with css
