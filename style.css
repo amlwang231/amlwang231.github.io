@@ -85,7 +85,7 @@ nav { /* blur behind nav bar */
     margin-top: 50px;
 } */
 
-/* TEST LATER */
+/* ------------------------TEST LATER------------------------ */
 .active { 
     font-size: 25px;
     text-decoration: underline;
@@ -102,13 +102,32 @@ nav { /* blur behind nav bar */
     font-weight: 550; /* line thickness. little thinner than default with this font-size*/
 }
 
-
-/* #about {
-    padding: 60px 0;
-} */
-
 .sub-title {
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 400;
-    padding: 20px 0px;
+    padding: 80px 0px 20px; /* top, left right, bottom*/
+}
+
+.row {
+    display: flex; /* flex container- wrap child elements to next line */
+    justify-content: space-between; /* distribute elements equally */
+    flex-wrap: wrap; /* wrap items to multiple lines */
+}
+
+.box-name {
+    flex-basis: 40%; /*how much of screen takes up */
+}
+
+.box-text {
+    flex-basis: 55%;
+}
+
+/* media query for screen size */
+@media screen and (max-width: 600px) {
+    .proj-name {
+        flex-basis: 100%;
+    }
+    .proj-text {
+        flex-basis: 100%;
+    }
 }
