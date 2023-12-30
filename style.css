@@ -49,7 +49,7 @@ nav ul li a { /* anchor elements within list items of ul */
     position: relative;
 }
 
-ul { /* unordered list */
+nav ul { /* unordered list */
     position: relative; 
     top: 0; /* make fixed to top even when scroll down */
     right: 0;
@@ -68,6 +68,7 @@ nav ul li a::after {
 
 nav ul li a:hover::after { /* uncover bar when hover over */
     width: 100%;
+
 }
 
 nav ul li:hover a {
@@ -135,7 +136,7 @@ nav { /* blur behind nav bar */
     background: #0b2b6b;
     position: absolute;
     left: 0;
-    bottom: -6px; /* puts distance btwn text and underline */
+    bottom: -6px;
     transition: width 0.5s;
   }
   
@@ -160,7 +161,7 @@ nav { /* blur behind nav bar */
 
 .box-text {
     width: 60%;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 /* name boxes over text boxes and columns merge on smaller screen */
