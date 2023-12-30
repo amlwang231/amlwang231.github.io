@@ -11,6 +11,7 @@
 body { /* refers to body element directly */
     background: #dde4f1;
     color: #0b2b6b;
+    line-height: 1.4; /* more spaced out */
 }
 
 #header { /* # refers to html element */
@@ -70,7 +71,8 @@ nav ul li a:hover::after { /* uncover bar when hover over */
 }
 
 nav ul li:hover a {
-    font-size: 20px;
+    /* font-size: 20px; */
+    text-decoration: bold;
 }
 
 nav { /* blur behind nav bar */
@@ -92,8 +94,8 @@ nav { /* blur behind nav bar */
 
 /* ------------------------TEST LATER------------------------ */
 .active { 
-    font-size: 25px;
-    text-decoration: underline;
+    font-size: 20px;
+    width: 100%;
 }
 
 .header-text {
@@ -142,7 +144,7 @@ nav { /* blur behind nav bar */
   }
   
   .resume-button:hover {
-    font-size: 36px;
+    font-size: 32px;
   }
 
 .row {
