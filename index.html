@@ -238,6 +238,18 @@
 
 <!-- convention to load at end -->
 <!-- <script src="app.js"></script> -->
+<script>
+    // recognize anchor links in nav
+    const navLinks = document.querySelectorAll('nav a');
+
+    // create event listener for click for each link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // if link clicked, uncheck checkbox (collapse hamburger menu)
+            document.getElementById('menu-toggle').checked = false;
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -113,6 +113,7 @@ nav { /* blur behind nav bar */
     color: #0b2b6b;
     left: 0;
     transition: font-size 0.5s;
+    z-index: 1;
 }
 
 /* same underline method with nav bar */
@@ -125,6 +126,7 @@ nav { /* blur behind nav bar */
     left: 0;
     bottom: -6px;
     transition: width 0.5s;
+    z-index: 1;
   }
   
   .resume-button:hover::before, .proj-link:hover::before {
@@ -191,7 +193,6 @@ html { /* smooth scroll when click anchor links instead of jump */
     left: 20px;
 }
 
-
 /* 768px for mobile */
 /* don't know why this needs to be separate */
 @media only screen and (max-width: 768px) {
@@ -205,8 +206,39 @@ html { /* smooth scroll when click anchor links instead of jump */
 
     /* show nav list when check checkbox */
     #menu-toggle:checked + label.menu-icon + nav ul {
-        display: block;
+        display: inline-block;
+        width: max-content; /* makes background span width of text */
+        flex-direction: column;
+        position: fixed;
     }
+
+    nav ul {
+        list-style: none;
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        background: #d0ddf5;
+        border-radius: 25px;
+    }
+    
+    nav ul li {
+        display: block;
+        padding: 5px 10px;
+        border-right: none;
+    }
+
+    nav ul li:first-child {
+        margin: 10px 2px;
+        /* about was indented? so reset left right margin to 2px */
+    }
+
+    nav {
+        z-index: 2;
+        /* z-index of resume button and proj links were overlapping */
+        /* so gave nav higher z-index */
+    }
+
 }
 
 
