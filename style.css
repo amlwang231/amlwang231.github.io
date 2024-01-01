@@ -86,19 +86,6 @@ nav { /* blur behind nav bar */
     border-radius: 25px; /* makes edges round */
 }
 
-/* hr {
-    border: none;
-    height: 1px;
-    background-color: #0b2b6b;
-    margin-top: 50px;
-} */
-
-/* ------------------------TEST LATER------------------------ */
-.active { 
-    font-size: 20px;
-    width: 100%;
-}
-
 .header-text {
     margin-top: 20%;
     font-size: 30px;
