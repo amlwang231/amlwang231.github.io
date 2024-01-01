@@ -156,12 +156,13 @@ nav { /* blur behind nav bar */
     padding-bottom: 50px;
 }
 
-/* name boxes over text boxes and columns merge on smaller screen */
 /* media query for screen size */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+    /* name boxes over text boxes and columns merge on smaller screen */
     .box-name {
         width: 100%;
     }
+
     .box-text {
         width: 100%;
     }
@@ -170,3 +171,42 @@ nav { /* blur behind nav bar */
 html { /* smooth scroll when click anchor links instead of jump */
     scroll-behavior: smooth;
 }
+
+/* hide the checkbox by default */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px; /* make the icon bigger */
+    position: fixed; /* keep icon fixed as scroll */
+    top: 20px;
+    left: 20px;
+}
+
+
+/* 768px for mobile */
+/* don't know why this needs to be separate */
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* show icon */
+    }
+
+    nav ul {
+        display: none; /* hide nav bar */
+    }
+
+    /* show nav list when check checkbox */
+    #menu-toggle:checked + label.menu-icon + nav ul {
+        display: block;
+    }
+}
+
+
