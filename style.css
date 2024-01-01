@@ -117,7 +117,7 @@ nav { /* blur behind nav bar */
 }
 
 /* no change before or after hover */
-.resume-button, .resume-button:visited {
+.resume-button, .resume-button:visited, .proj-link, .proj-link:visited {
     display: inline-block;
     margin: 10px 0px;
     position: relative;
@@ -129,7 +129,7 @@ nav { /* blur behind nav bar */
 }
 
 /* same underline method with nav bar */
-.resume-button::before {
+.resume-button::before, .proj-link::before{
     content: '';
     width: 0;
     height: 3px;
@@ -140,12 +140,17 @@ nav { /* blur behind nav bar */
     transition: width 0.5s;
   }
   
-  .resume-button:hover::before {
+  .resume-button:hover::before, .proj-link:hover::before {
     width: 100%;
   }
   
   .resume-button:hover {
     font-size: 32px;
+  }
+
+
+  .proj-link:hover {
+    font-size: 18px;
   }
 
 .row {
@@ -173,4 +178,8 @@ nav { /* blur behind nav bar */
     .box-text {
         width: 100%;
     }
+}
+
+html { /* smooth scroll when click anchor links instead of jump */
+    scroll-behavior: smooth;
 }
